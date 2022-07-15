@@ -1,0 +1,832 @@
+
+
+/* 
+    1- comment Style
+    2-Gineral Style
+    3-section
+        3.0-Heder Section
+        3.1-Home Section
+        3.2-About Section
+        3.3-prtofile Section
+        3.4-Services Section
+        3.5-Prices Section
+        3.6-Team Section
+        3.7-Blog Section
+        3.8-Contint Section
+        3.9-foter Section
+*/
+
+ 
+
+
+
+/* 1- comment Style */
+
+    /* 
+    -contener
+    -opacety
+    -section-background
+    -seciton title
+    -section padding
+    -haver efect (left -rihte)
+    -haver effect (top -bottom)
+    */
+
+
+
+
+/* 2-Gineral Style */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ h1, h2, h3, h4, h5, h6 {
+    font-family: montserrat, sans-serif;
+}
+
+.contener{
+    width: 80%;
+    margin: auto;
+}
+.bady{
+    position: relative;
+}
+body ,a{
+    font-family: 'Crimson Pro', serif;
+}
+section{
+    height: 100vh;
+}
+.section-background{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.707);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    
+}
+.haver-opasty{
+    transition: opacity 0.5s;
+}
+
+.haver-opasty:hover{
+    opacity: 0.7;
+}
+
+.clear{
+    clear: both;
+}
+.pd-y{
+    padding: 60px;
+}
+.contint-title{
+    text-align: center;
+    padding-bottom: 60px;
+}
+.titel-Section{
+    font-size: 32px;
+   display: inline-block;
+   text-align: center;
+}
+
+.titel-Section::after{
+   content: "";
+    display:block; 
+    height: 3px;
+    width: 20%;
+    margin: auto;
+    background-color: #6195ff;
+    margin-top: 10px;
+   
+}
+
+.ltr-effect ,
+.ttb-effect{
+    position: relative;
+}
+.ltr-effect::after ,.ttb-effect::after{
+position: absolute;
+content: "";
+transition: 0.7s;
+background-color: #242424;
+left: 0;
+top: 0;
+bottom: 0;
+right: 0;
+z-index: -1;
+}
+
+.ltr-effect::after{
+    width: 0;
+}
+
+.ttb-effect::after{
+    height: 0;
+}
+
+.ltr-effect:hover::after{
+width: 100%;
+
+}
+
+.ttb-effect:hover::after{
+    height: 100%;
+    
+    }
+/* 3-section */
+/*  3.0-Heder Section */
+
+.heders{
+
+    background-color: rgba(0, 0, 0, 0.604);
+   
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.logo{
+    float: left;
+    width: 30%;
+ }
+ .logo img{
+width: 25%;
+margin-top: 25px;
+ }
+
+.heder{
+    width: 70%;
+    float: left;
+    text-align: right;
+  }
+
+.heder > li{
+    display: inline-block;
+    list-style: none;  
+}
+
+.heder > li > a{
+    display: block;
+    color: white;
+    padding: 30px 11px;
+    text-decoration: none;
+    font-size: 16px;
+}
+.heder > li > a::after{
+content: "";
+display: block;
+width: 0;
+height: 3px;
+background-color: #6195ff;
+transition: width 0.5s;
+margin-top: 2px;
+}
+
+
+.heder li .Active::after{
+width: 100%;
+}
+.heder > li > a:hover:after{
+    width: 100%;
+}
+
+.drob-down{
+    position: relative;
+}
+
+.drobdown-menu{
+    position: absolute;
+    background-color: #6195ff;
+    text-align: center;
+    width: 150px;
+    display: block;
+    left: -50%;
+    top: 70%;
+    opacity: 0;
+    visibility: hidden;
+    transition : opacity 0.5s , visibility 0.5s ;
+}
+.drobdown-menu a{
+    display: block;
+    padding: 10px;
+    color: white;
+    transform: none;
+    text-decoration: none;
+}
+.drob-down:hover .drobdown-menu{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+
+/*  3.1 -Home Section */
+.section1{
+    height: 100vh;
+    background-image: url(../images/background/background1.webp);
+    background-size: cover;
+    top: 0;
+    position: relative;
+}
+
+
+.home-contint{
+    position: absolute;
+    text-align: center;
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    padding: 50px;
+    
+}
+.home-contint *{
+margin: 15px 0;
+color: white;
+}
+
+ 
+.home-contint .titel-home{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-family: montserrat, sans-serif;
+
+}
+.home-contint .paragraph-home{
+    font-size: 17px;
+    line-height: 1.5;
+ letter-spacing: 2px;  
+}
+
+
+
+.home-contint .button-home{
+   min-width: 160px;
+    padding:15px 0 ;
+    border-radius: 10px;
+    border-color: rgba(255, 255, 255, 0);
+    color: #000;
+   font-size: 16px;
+    cursor: pointer;
+    font-family: montserrat, sans-serif;
+}
+.home-contint .button1{
+    margin-right: 20px;
+    background-color: white;
+}
+.home-contint .button2{
+color: white;
+    background-color: #6195ff;
+}
+
+
+
+/*  3.2-About Section */
+
+.section2{
+    position: relative;
+    display: block;
+   
+}
+.sequar-Abute{
+    width: 31%;
+    height: 260px;
+    padding: 20px 10px;
+   border: 2px solid rgb(249 244 244);
+float: left;
+margin-left: 35px;
+}
+.sequar-Abute1{
+margin-left: 0;
+}
+.icon-Abute{
+display: block ;
+font-size: 40px;
+color: #6195ff;
+text-align: center;  
+}
+.sequar-Abute .titel-sequar-Abute{
+color: #000;
+font-size: 23px;
+font-family: montserrat, sans-serif;
+transition: 0.5s;
+}
+.paragraph-About{
+    font-family: 'Crimson Pro', serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: rgb(124, 124, 124);
+    padding: 8px 4px;
+}
+.Link-Abute{
+    font-size: 18px;
+    color: #6195ff;
+    text-decoration: none;
+}
+.sequar-Abute *{
+padding: 8px;
+display: block;
+text-align: center;
+}
+
+.sequar-Abute:hover .titel-sequar-Abute{
+    color: rgb(255, 255, 255);
+}
+
+
+
+/*3.3-prtofile Section */
+.section3{
+height: 170vh;
+background-color: #f9f9f9;
+}
+
+.prtofile-class{
+    width: 32%;
+    margin-bottom: 5PX;
+    position: relative;
+    float: left;
+    margin: 6px;
+    height: 20%;
+}
+
+.prtofile-class .img-class{
+    width: 100%;
+   
+}
+.prtofile-class .contint1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ;
+
+}
+.prtofile-class .contint2{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 70%;
+    transform: translate(-50% ,-50%);
+    text-align: center;
+
+}
+
+.prtofile-class .contint2 .category{
+    text-transform: uppercase;
+    color: #6195ff;
+    display: block;
+    margin-bottom: 5px;
+    position: relative;
+    top: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ,top 0.5s;
+    transition-delay: 0.2s;
+}
+.prtofile-class .contint2 .title{
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 10px;
+    position: relative;
+    top: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ,top 0.5s;
+    transition-delay: 0.5s;
+    }
+
+.prtofile-class .contint2 i{
+    font-size: 16px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    background-color: #6195ff;
+    color: #fff;
+    position: relative;
+    top: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ,top 0.5s;
+    transition-delay: 0.5s;
+}
+
+.prtofile-class:hover.prtofile-class .contint1,
+.prtofile-class:hover.prtofile-class .category,
+.prtofile-class:hover.prtofile-class .title,
+.prtofile-class:hover.prtofile-class i
+{
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  
+}
+
+.prtofile-class:hover.prtofile-class .img-class 
+{
+    padding: 15px;
+    transition: 0.5s;
+}
+
+
+/*  3.4-Services Section */
+
+.section4{
+    height: 120vh;
+    }
+
+
+.sequar-Services{
+    width: 30%;
+    margin: 16px;
+    float: left;
+    padding: 30px;
+border: 1px solid #35353549;
+}
+.sequar-Services .icon-Services{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    color: #6195ff;
+font-size: 27px;
+}
+
+.sequar-Services .titel-sequar-Services{
+    display: inline-block;
+   font-size: 20px;
+padding-left: 10px;
+transition: 0.5s;
+}
+
+
+.sequar-Services .paragraph-Services{
+
+padding: 12px 3PX 2PX 42PX;
+font-family: 'Crimson Pro', serif;
+font-size: 17px;
+line-height: 1.4;
+color: rgb(124, 124, 124);
+}
+.sequar-Services:hover.sequar-Services .titel-sequar-Services{
+    color: #fff;
+} 
+
+
+
+/* partserv section*/
+.section5{
+    background-color: #f9f9f9;
+}
+.lift-partserv{
+    width: 50%;
+    float: left;
+    padding: 20px;
+
+}
+.contint-title-partserv {
+        text-align: left ;
+  height: 85px;
+  font-size: 25px;
+}
+
+.titel-Section-partserv::after{
+    margin: 0 ;
+    width: 30%;
+    height: 2px;
+    margin-top: 10px;
+}
+.lift-partserv .paragraph-partserv{
+    color: gray;
+    font-size: 18px;
+    line-height: 1.3;
+    display: inline-block;
+}
+
+.lift-partserv .all-smoll-paragraph{
+    width: 100%;
+    margin: 22px 0;
+}
+
+.lift-partserv .icon-partserv{
+font-size: 20px;
+height: 30px;
+line-height:30px ;
+text-align: center;
+width: 30px;
+border:2px solid #6195ff ;
+border-radius: 50%;
+margin-right:5px ;
+color: #6195ff;
+}
+
+.right-partserv{
+    width: 49%;
+    float: left;
+height: 75vh;
+}
+
+.right-partserv .partserv-img{
+    width: 100%;
+   height: 100%;
+
+}
+
+
+/* backpart Section */
+
+.section6{
+height: 70vh;
+}
+
+.background-backpart{
+    width: 100%;
+    background-image: url('../images/background/background2.webp');
+height: 60%;
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+
+}
+
+.background-backpart .all-contint-backpart{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+ 
+}
+
+ .all-contint-backpart .contint-backpart {
+   
+width: 24%;
+    margin: 5px;
+    margin-top: 70px;
+    text-align: center;
+    float: left;
+ }
+ .contint-backpart .icon-backpart{
+    font-size: 26px;
+    color: rgb(96, 129, 221);
+    margin-bottom: 15px;
+ }
+
+ .contint-backpart .number-backpart ,.contint-backpart .text-backpart{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-bottom: 3px;
+    display: block;
+    font-size: 1.17em;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+    transition: color 0.5s;
+ }
+ .contint-backpart .text-backpart{
+    font-size: 1em;
+ }
+
+ /*Prices Section*/
+.section7{
+    height: 120vh;
+}
+
+ .sequar-Prices{
+    width: 31%;
+    margin: 11.6px;
+    float: left;
+    text-align: center;
+    height: 70vh;
+    padding:30px 80px ;
+    border: 1px solid #3535353e;
+ }
+
+
+ .sequar-Prices .span-Prices{
+    font-size: 18px;
+    color: rgb(146, 146, 146);
+    display: block;
+    margin-bottom: 30px;
+    transition: 0.5s;
+ }
+
+ 
+ .all-paragraph-Prices{
+    margin: 20px 0;
+ }
+
+
+.sequar-Prices .contint-price{
+    height: 130px;
+    width: 130px;
+    border:2px solid #6195ff ;
+    border-radius: 50%;
+ padding: 15px;  
+  margin:  auto ;
+font-weight: bold;
+transition: 0.5s;
+}
+
+.contint-price .titel-sequar-Prices{
+ 
+    font-size: 50px;
+    
+}
+.contint-price .paragraph-contint-Prices{
+    font-size: 20px;
+}
+.sequar-Prices .paragraph-Prices{
+font-size: 17px;
+ color: rgb(146, 146, 146);
+line-height: 30px;
+
+}
+.sequar-Prices .Link-Prices{
+    margin:auto ;
+    font-size: 17px;
+    color: #6195ff;
+    border: 2px solid #6195ff;
+    border-radius: 40px;
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    width: 150px;
+  
+}
+
+.sequar-Prices:hover.sequar-Prices .span-Prices,
+.sequar-Prices:hover.sequar-Prices .contint-price{
+    color: #6195ff;
+   
+}
+
+
+
+/* Time Section */
+
+.section8{
+height: 90vh;
+}
+
+.background-Team{
+    background-image: url('../images/background/background3.webp');
+width: 100%;
+background-repeat: no-repeat;
+background-size: cover;
+height: 70%;
+background-attachment: fixed;
+}
+.all-contint-Team{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(24, 24, 24, 0.8);
+    position: relative;
+}
+
+.contint-Team{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    width: 36%;
+    text-align: left;
+    margin: 90px;
+    height: 100%;
+    transform: translate(-50% ,-50%);
+}
+.m1{
+    left: 65%;
+}
+.div-img-Time{
+    width: 70px;
+    height: 70px;
+    float: left;
+}
+.div-img-Time img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.contint-Time{
+    width: 300px;
+    height: 80px;
+    float: left;
+    line-height: 30px;
+    margin: 10px ;
+}
+.contint-Time .name-Team{
+    font-size: 24px;
+    color: #fff;
+    text-transform: capitalize;
+
+}
+.contint-Team .text-Team{
+    font-size: 15px;
+    color: #6195ff;
+}
+.paragraph-Team{
+    display: block;
+   width: 400px;
+   font-size: 17px;
+   color: rgb(209, 209, 209);
+}
+
+/*  3.7-Blog Section */
+
+.sequar-Blog{
+    width: 30%;
+    height: 60%;
+    background-color: rgba(44, 44, 44, 0.054);
+    padding: 20px;
+    float: left;
+    margin: 16px;
+}
+
+.div-blog-img{
+    width: 100%;
+    height: 230px;
+    position: relative;
+}
+.div-blog-img img{
+    height: 100%;
+    width: 100%;
+}
+
+.div-blog-img::after{
+    position: absolute;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.349);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: 0.5s;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .sequar-Blog:hover .div-blog-img::after{
+   opacity: 1;
+   visibility: visible;
+  }
+
+  .contint-Blog{
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+    line-height: 25px;
+  }
+  .contint-Blog .name-Blog{
+font-size: 21px;
+
+transition: 0.5s;
+  }
+  .sequar-Blog:hover .contint-Blog .name-Blog{
+    color: #fff;
+  }
+
+  .contint-Blog .text-Blog{
+    font-size: 15px;
+    color: #939393;
+  }
+  .sequar-Blog:hover .contint-Blog .text-Blog{
+    color: #6195ff;
+    transition: 0.5s;
+  }
+  .all-blog-icon{
+    position: absolute;
+    top: 5.5%;
+    right: 0%;
+    width: 20%;
+    list-style: none;
+    font-size: 25px;
+    line-height: 35px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    z-index: 1;
+  }
+  .all-blog-icon i{
+    background-color: #6195ff;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+  }
+  .sequar-Blog:hover .all-blog-icon{
+    opacity: 1;
+    visibility: visible;
+  }
